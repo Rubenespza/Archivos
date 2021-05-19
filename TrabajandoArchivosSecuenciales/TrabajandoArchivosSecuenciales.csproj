@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00F0EA8A-2CFB-4287-B1A6-0A45B26AA996}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TrabajandoArchivosSecuenciales</RootNamespace>
+    <AssemblyName>TrabajandoArchivosSecuenciales</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArchivosSecuenciales.cs" />
+    <Compile Include="DialogBoxAltas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBoxAltas.Designer.cs">
+      <DependentUpon>DialogBoxAltas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogBoxBuscarEspecialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBoxBuscarEspecialidad.Designer.cs">
+      <DependentUpon>DialogBoxBuscarEspecialidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogBoxBuscarMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBoxBuscarMatricula.Designer.cs">
+      <DependentUpon>DialogBoxBuscarMatricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogBoxBuscarNombre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBoxBuscarNombre.Designer.cs">
+      <DependentUpon>DialogBoxBuscarNombre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogBoxBuscarPromedio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBoxBuscarPromedio.Designer.cs">
+      <DependentUpon>DialogBoxBuscarPromedio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogBoxBuscarSemestre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBoxBuscarSemestre.Designer.cs">
+      <DependentUpon>DialogBoxBuscarSemestre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DialogBoxAltas.resx">
+      <DependentUpon>DialogBoxAltas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBoxBuscarEspecialidad.resx">
+      <DependentUpon>DialogBoxBuscarEspecialidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBoxBuscarMatricula.resx">
+      <DependentUpon>DialogBoxBuscarMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBoxBuscarNombre.resx">
+      <DependentUpon>DialogBoxBuscarNombre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBoxBuscarPromedio.resx">
+      <DependentUpon>DialogBoxBuscarPromedio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBoxBuscarSemestre.resx">
+      <DependentUpon>DialogBoxBuscarSemestre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
